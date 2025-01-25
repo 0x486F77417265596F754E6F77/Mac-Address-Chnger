@@ -10,11 +10,11 @@ parser.add_option("-m", "--address", dest="new_mac_address", help="-h")
 options, arguments = parser.parse_args()
 
 if not options.interface_name:
-    parser.error("Usage: python3 macchanger.py -i <Your Interface Here> -m <Choice New Mac Address For Your Interface")
+    parser.error("Usage: python3 mac_changer.py -i <Your Interface Here> -m <Choice New Mac Address For Your Interface")
     exit()
 
 if not options.new_mac_address:
-    parser.error("Usage: python3 macchanger.py -i <Your Interface Here> -m <Choice New Mac Address For Your Interface")
+    parser.error("Usage: python3 mac_changer.py -i <Your Interface Here> -m <Choice New Mac Address For Your Interface")
     exit()
 
 nic_check = subprocess.check_output("ifconfig", shell=True).decode("utf-8")
